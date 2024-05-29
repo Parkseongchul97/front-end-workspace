@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 태그</title>
+  </head>
+  <body>
+    <h1>기본적인 표 만들기</h1>
+    <!-- 행과 열을 만들어야함
+        table 표 전체 tr 줄 td 칸
+        한줄나올때마다 tr넣고 칸채울땐 td-->
+    <table border="1">
+      <tr>
+        <td>브라우저명</td>
+        <td>제조사</td>
+        <td>홈페이지</td>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Google</td>
+        <td><a href="https://www.google.com/">https://www.google.com/</a></td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Apple</td>
+        <td><a href="https://www.apple.com/">https://www.apple.com/</a></td>
+      </tr>
+    </table>
+
+    <h2>표의 행과 열을 합치는 속성</h2>
+    <!-- (tr>td*3)*4
+        아래로 합치고 싶다면
+        rowspan="합칠 칸수" 하고 빈칸 제거
+        가로로 합치고 싶다면 
+        colspan="숫자" 하고 빈칸 제거
+        td 뒤에 width="n" height="n" 
+        으로 사이즈 조절 가능하고 첫번째 td에 넣으면 동시에 적용됨
+    -->
+
+    <table border="1">
+      <tr>
+        <td rowspan="2" width="80" height="80">사진</td>
+        <td>이름</td>
+        <td>루이바오 & 후이바오</td>
+      </tr>
+
+      <tr>
+        <td>연락처</td>
+        <td>010-1234-5678</td>
+      </tr>
+
+      <tr>
+        <td colspan="2" height="30">주소</td>
+        <td>경기도 용인 애버랜드 판다월드</td>
+      </tr>
+
+      <tr>
+        <td colspan="2" height="60">자기소개</td>
+        <td>우리는 개발자를 꿈꾸는 판다! 할수있다</td>
+      </tr>
+    </table>
+
+    <h2>테이블 내의 구조 나누기</h2>
+    <!--    테이블의 이름? 그런거 정할때 사용하는거
+        caption
+    -->
+    <table border="1">
+      <caption>
+        바오패밀리 친구들
+      </caption>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+          <th>주소</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>코식이</td>
+          <td>33</td>
+          <td>경기도 용인</td>
+        </tr>
+        <tr>
+          <td>제돌이</td>
+          <td>11</td>
+          <td>제주도</td>
+        </tr>
+        <tr>
+          <td>세로</td>
+          <td>4</td>
+          <td>서울 광진구</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">총 마리 수</th>
+          <td>3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

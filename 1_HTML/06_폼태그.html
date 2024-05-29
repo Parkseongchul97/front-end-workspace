@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+  </head>
+  <body>
+    <h2>폼 태그의 기본 구조</h2>
+    <!-- 사용자에게 입력을 받는 태그
+        로그인 할 때, 검색 할 때
+        <form action="서버관련" method="???"
+        method="post" : 보안관련 이슈있는거 보낼때(아이디 비번등)
+        method="get" : 검색처럼 보안관련 이슈 없을때
+        >
+        -->
+    <h3>검색 폼</h3>
+    <!-- input type="text" 글쓰는창 뒤에 name="값"을 넣어서 key를 지정해줘야함
+        submit 제출 안에 value를 넣어서 제출의 이름은 변경가능
+        label for="id값" ?????
+    -->
+    <form action="" method="get">
+      <label for="search"
+        >검색할 내용 :
+        <input type="text" name="keyword" id="search" />
+      </label>
+      <input type="submit" value="검색" />
+
+      <h3>회원가입 폼</h3>
+    </form>
+  </body>
+</html>
