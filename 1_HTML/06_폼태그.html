@@ -16,9 +16,11 @@
         -->
     <h3>검색 폼</h3>
     <!-- input type="text" 글쓰는창 뒤에 name="값"을 넣어서 key를 지정해줘야함
-        submit 제출 안에 value를 넣어서 제출의 이름은 변경가능
-        label for="id값" ?????
-    -->
+        submit : 서버에 제출 
+        제출 안에 value를 넣어서 제출의 이름은 변경가능
+        label for="id값" 라벨과 input 연결
+          라벨을 앞뒤로 묶으면 input에 id 타입을 지정 안하고도 가능-->
+
     <form action="" method="get">
       <label for="search"
         >검색할 내용 :
@@ -27,6 +29,171 @@
       <input type="submit" value="검색" />
 
       <h3>회원가입 폼</h3>
+      <!-- fieldset 사용을 거의 하지는 않지만
+        틀을 잡아주는 태그
+          legend 틀에 글자를 넣어줌-->
+
+      <form action="" method="post">
+        <!-- 
+          input type="submit" 제출 
+          input type="password" 비밀번호 사용할때
+          input type="reset" 초기화
+          input type="button" 말그대로 버튼 (자바스크립트와 사용)
+          placeholder 안에 값을 넣기전에 나오는거
+          글씨만 나옴
+          ex) 사이트 아디비번 입력할때 뜨는 회색글씨 
+          value 로도 안에 값을 넣을수 있는데 이건 진짜 값임
+          required 필수값 지정 입력필수로 만듬
+          autofocus 시작하면 포커스가 거기에 맞춰짐
+          readonly <-수정불가
+          onclick="자바스크립트코드" 클릭시 코드가 발동
+          
+        -->
+        <fieldset>
+          <legend>회원정보</legend>
+          <label for="id">아이디 : </label>
+          <input
+            type="text"
+            name="id"
+            id="id"
+            placeholder="아이디"
+            required
+          /><br /><br />
+          <label for="pwd">패스워드 : </label>
+          <input
+            type="password"
+            name="pwd"
+            id="pwd"
+            placeholder="비밀번호"
+            autofocus
+          />
+        </fieldset>
+        <fieldset>
+          <legend>배송정보</legend>
+          <label for="name">수령인 : </label>
+          <input type="text" name="name" id="name" /><br /><br />
+          <label for="addr">주소 : </label>
+          <input
+            type="text"
+            name="addr"
+            id="addr"
+            value="서울 강남구"
+            readonly
+          />
+        </fieldset>
+        <input type="submit" value="회원가입" />
+        <input type="reset" />
+        <input type="button" value="버튼" onclick="alert('버튼클릭!')" />
+      </form>
+    </form>
+
+    <h3>type="radio | checkbox"</h3>
+
+    <!-- 둘은 value 값이 필수
+          input안에  checked 넣으면 기본 체크로 댐
+         -->
+    <form action="">
+      <fieldset>
+        <legend>성별</legend>
+        <label for="man">
+          <input type="radio" name="gender" id="man" value="M" checked /> 남자
+          <br />
+        </label>
+        <label for="woman">
+          <input type="radio" name="gender" id="woman" value="F" /> 여자
+          <br /><br />
+        </label>
+      </fieldset>
+      <input type="submit" value="선택" />
+
+      <fieldset>
+        <legend>관심사</legend>
+        <label>
+          <input type="checkbox" name="interest" value="movie" />영화 </label
+        ><br />
+        <label>
+          <input type="checkbox" name="interest" value="exercise" />운동 </label
+        ><br />
+        <label>
+          <input type="checkbox" name="interest" value="game" />게임 </label
+        ><br />
+        <label>
+          <input type="checkbox" name="interest" value="alcohol" />술
+        </label>
+      </fieldset>
+      <input type="submit" value="선택 완료" />
+    </form>
+
+    <h3>type= "hidden | file"</h3>
+
+    <!-- file 속성에서 multiple 을 넣으면 다수의 파일을 넣을수 있음
+         file 속성에서 accept 를 넣으면 허용 범위 지정가능 
+         ex) <input type="file" accept=".jpg ,.png ,.gif"> 
+         이미지 전부를 하고싶다면
+         accept="image/* 식으로 가능
+         -->
+    <form action="">
+      <input type="hidden" name="hiddenValue" value="1234" />
+      <input type="file" multiple accept="image/*" name="file" /><br /><br />
+      <input type="submit" />
+    </form>
+
+    <h3>type="datetime-local | week | month | date | time "</h3>
+
+    <form action="">
+      datetime-local :
+      <input type="datetime-local" /><br /><br />
+      week :
+      <input type="week" /><br /><br />
+      month :
+      <input type="month" /><br /><br />
+      date :
+      <input type="date" /><br /><br />
+
+      time :
+      <input type="time" /><br /><br />
+    </form>
+
+    <h3>type="email | search | number | range | color"</h3>
+
+    <form action="">
+      eamil : <input type="email" /><br /><br />
+      > search : <input type="search" /> <br /><br />
+      number :
+      <input type="number" /> <br />
+      <br />
+      range : <input type="range" /> <br />
+      <br />
+      color :
+      <input type="color" />
+    </form>
+
+    <h2>select | textarea | button 태그</h2>
+    <!-- <optgroup label="큰틀"
+         <option value="서버로 보내지는거">작은틀</option>
+         <option selected> selected를 고르면 스타팅이 그걸로 설정
+        -->
+
+    <form action="">
+      국적 :
+      <select name="national">
+        <br />
+
+        <optgroup label="아시아">
+          <option value="kr">한국</option>
+          <option value="ch">중국</option>
+          <option value="jp">일본</option>
+        </optgroup>
+        <optgroup label="기타">
+          <option value="us">미국</option>
+          <option value="fr">프랑스</option>
+        </optgroup>
+        <option selected>-------</option>
+      </select>
+      <br /><br />
+      <textarea style="resize: none"></textarea><br />
+      <!-- button type="reset" 알고있는 리셋버튼과 같음 -->
+      <button type="submit">전송</button>
     </form>
   </body>
 </html>
