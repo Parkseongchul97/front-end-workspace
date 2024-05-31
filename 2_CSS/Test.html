@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testpost</title>
+    <title>테스트</title>
+    <link rel="stylesheet" href="/2_CSS/css/Test.css">
   </head>
   <!--<body>
     <h3><i>기울기</i> <mark> 형광팬</mark></h3>
@@ -335,14 +336,74 @@
     </form>
     
     <form action="">
-      <fieldset>
-        <legend>건강 검진 신청서</legend>
-        <label for="name3">이름 : </label>
+      <fieldset id="p2" >
+        <legend><h2 id="a1">치매 자기진단 태스트</h2> </legend>
+        <div><img id="bao" src="/resources/bao.jpg" alt=""></div><br>
+        <label for="name3">이름 : 
         <input type="text" name="name3" id="name3" placeholder="이름"><br><br>
-        성별 ---- <label for="man2">남자</label>
-        <input type="radio" name="gender2" id="man2">
-        <label for="woman2">여자</label>
-        <input type="radio" name="gender2" id="woman2">
+        성별 : 
+        <input type="radio" name="gender2" id="man2" class="g" value="m">
+        <label for="man2">남자</label>
+        <input type="radio" name="gender2" id="woman2" class="g" value="w">
+        <label for="woman2">여자</label><br><br>
+       
+       
+        <label for="age">나이 : </label>
+        <select name="age" id="age">
+          <br />
+  
+          
+            <option value="30">30대 이하</option>
+            <option value="40">40대</option>
+            <option value="50">50대</option>
+          
+            <option value="60">60대</option>
+            <option value="70">70대</option>
+            <option value="80">80대 이상</option>
+          </optgroup>
+          <option selected>-------</option>
+        </select><br><br>
+        <h4>현재 건강상태를 솔직하게 눌러주십시오</h4>
+        
+        <h5 class="q">1. 전화번호나 사람이름을 기억하기 힘들다.</h5>
+        <fieldset class="p1">
+        <input type="radio" name="1y" id="1y" value="yes">
+        <label for="1y">예</label>
+        <input type="radio" name="1n" id="1n" value="no">
+        <label for="1n">아니오</label>
+      </fieldset><br>
+      <h5 class="q">2. 어떤 일이 언제 일어날지 기억하지 못할때가 있다.</h5>
+      <fieldset class="p1">
+      <input type="radio" name="2y" id="2y" value="yes">
+      <label for="2y">예</label>
+      <input type="radio" name="2n" id="2n" value="no">
+      <label for="2n">아니오</label>
+    </fieldset ><br>
+    <h5 class="q">3. 며칠 전에 들었던 이야기를 잊는다.</h5>
+      <fieldset class="p1">
+      <input type="radio" name="3y" id="3y" value="yes">
+      <label for="3y">예</label>
+      <input type="radio" name="3n" id="3n" value="no">
+      <label for="3n">아니오</label>
+    </fieldset><br>
+    <h5 class="q">4. 오래전부터 들었던 이야기를 잊는다.</h5>
+      <fieldset class="p1">
+      <input type="radio" name="4y" id="4y" value="yes">
+      <label for="4y">예</label>
+      <input type="radio" name="4n" id="4n" value="no">
+      <label for="4n">아니오</label>
+    </fieldset><br>
+    <h5 class="q">5. 반복되는 일상 생활에 변화가 생겼을 때 금방 적응하기가 힘들다.</h5>
+      <fieldset class="p1">
+      <input type="radio" name="5y" id="5y" value="yes">
+      <label for="5y">예</label>
+      <input type="radio" name="5n" id="5n" value="no">
+      <label for="5n">아니오</label>
+    </fieldset><br><br><br>
+    &nbsp;&nbsp;&nbsp;<input type="submit" id="b1" value="제출하기">&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href=""><button id="b2">위로</button></a>
+
+        
     </fieldset>
 
     </form>

@@ -1,0 +1,27 @@
+/* !important 기존의 우선순위를 무시하고 가장 우선순위가 높아짐*/
+div {
+  background: teal !important;
+  color: white !important;
+  width: 200px;
+  height: 200px;
+}
+/*선택자 우선순위  !important; > 인라인으로 태그안에 넣은 스타일 > id*/
+#id1 {
+  background-color: skyblue;
+}
+/* 선택자 우선순위 !important; > 인라인 > id > class */
+.class1 {
+  background: yellowgreen;
+  color: red;
+}
+/* 선택자 우선순위 !important; > 인라인 >id > class > 태그 */
+div {
+  background: teal;
+  color: white;
+  width: 200px;
+  height: 200px;
+}
+/*같은 선택자로 하면 우선순위가 아래일수록 높음*/
+div {
+  background: pink;
+}
