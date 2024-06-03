@@ -1,0 +1,51 @@
+* {
+  background-color: indianred;
+  font-style: 돋움체;
+  font-weight: 600;
+}
+a {
+  position: relative;
+}
+#t1 {
+  text-align: center;
+  width: 300px;
+  height: 280px;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 30px;
+}
+#bio {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  background-image: url(/resources/bao.jpg);
+  background-size: 60px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+#name {
+  font-size: 20px;
+  color: white;
+}
+.link {
+  display: block;
+  width: 270px;
+  height: 30px;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 2px;
+  color: white;
+  margin: auto;
+  margin-top: 15px;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+}
+.link:hover {
+  background-color: white;
+  color: indianred;
+}
