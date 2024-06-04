@@ -26,12 +26,12 @@ input[type="radio"]:checked {
   height: 20px;
 }
 #b1 {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.445);
   color: white;
   height: 30px;
 }
 #b2 {
-  background: blue;
+  background: rgba(0, 0, 255, 0.699);
   color: white;
 }
 #bao {
@@ -46,4 +46,12 @@ input[type="radio"]:checked {
 #name3,
 #age {
   height: 25px;
+}
+#b1:hover {
+  background-color: white;
+  color: black;
+}
+#b2:hover {
+  background-color: white;
+  color: black;
 }

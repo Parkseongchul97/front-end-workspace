@@ -1,49 +1,61 @@
 * {
+  font-weight: 550;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*기본값인 콘텐츠 박스를 보더 박스로 바꿔줘야 스크롤이 사라짐*/
+}
+body {
+  background: linear-gradient(purple, pink);
   background-color: indianred;
-  font-style: 돋움체;
-  font-weight: 600;
+  height: 100vh;
+  padding: 20px;
+  /*바디에 padding 값을 줘서 box에 margin 상하값 안주고 내림*/
 }
-a {
-  position: relative;
-}
-#t1 {
+#box {
   text-align: center;
-  width: 300px;
-  height: 280px;
-  border: 2px solid;
-  border-color: white;
+  width: 320px;
+  border: 2px solid white;
   border-radius: 5px;
   margin: auto;
-  margin-top: 30px;
+  /*
+  magin 말고 position으로도 잡을수 있는데
+  전체에 margin이랑 border값 0으로 설정후
+  position: absolute 주고
+  left: 50;주고 transform: translate(-50%) 줘서 중앙 잡으면됨(나중에배움)
+  */
 }
 #bio {
-  margin: auto;
-  height: 100px;
-  width: 100px;
+  margin: 20px auto; /*auto 넣을때도 위아래 좌우 순서대로 사용가능*/
+  height: 150px;
+  width: 150px;
   background-image: url(/resources/bao.jpg);
-  background-size: 60px;
   background-size: cover;
   background-position: center center;
-  border-radius: 50px;
-  margin-top: 20px;
+  border-radius: 50%;
 }
+/*
+.box img{ 어짜피 box안에 img 태그가 1개뿐이니 id나 calss 없이 이렇게도 편함
+  img 태그도 text-align:center로 가운데 정렬 가능
+  부모 태그 (box에) text-align:center를 넣어서 다 적용시키면됨
+  width: 150px;
+  heght: 150px;
+  object-fit: cover;
+  boder-radius: 50%;
+  margin-top:20px;
+*/
 #name {
   font-size: 20px;
-  color: white;
+  margin-bottom: 10px;
 }
 .link {
   display: block;
-  width: 270px;
-  height: 30px;
-  border: 2px solid;
-  border-color: white;
+  border: 2px solid white;
   border-radius: 2px;
-  color: white;
-  margin: auto;
-  margin-top: 15px;
-  line-height: 30px;
-  color: white;
+  margin: 10px 15px;
+  line-height: 35px; /*height 값이랑 같으면 가운데*/
   text-decoration: none;
+  padding: 5px;
 }
 .link:hover {
   background-color: white;

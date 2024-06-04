@@ -114,6 +114,8 @@
   background: orange;
 }
 #fixed {
+  display: flex;
+  justify-content: end;
   position: fixed;
   bottom: 20px;
   right: 200px;
