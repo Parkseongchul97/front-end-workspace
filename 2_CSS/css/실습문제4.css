@@ -1,0 +1,43 @@
+.container {
+  background: linear-gradient(45deg, black, blue 80%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  background-color: white;
+  width: 2px;
+  height: 10px;
+  margin: 1px;
+  border-radius: 30%;
+  animation: boxAni 1s infinite;
+}
+.square:nth-child(1),
+.square:nth-child(7) {
+  animation-delay: 100ms;
+}
+.square:nth-child(2),
+.square:nth-child(6) {
+  animation-delay: 66ms;
+}
+.square:nth-child(3),
+.square:nth-child(5) {
+  animation-delay: 33ms;
+}
+.square:nth-child(4) {
+  animation-delay: 0ms;
+}
+
+@keyframes boxAni {
+  0% {
+    transform: scaley(1);
+  }
+  50% {
+    transform: scaley(1.8);
+  }
+  100% {
+    transform: scaley(1);
+  }
+}

@@ -101,6 +101,26 @@
   밝기(brightness)는 %로 표시 (0%는 가장 어둡고, 100%는 가장 밝다)
   불투명도는 ???로 표시 (0은 완전 투명, 1은 완전 불투명)
 
+## img 설정
+
+- background : image repeat attachment position clip origin size
+- background-image : 배경에 이미지를 설정하는 속성
+- background-repeat : 배경 이미지 반복 여부를 지정하는 속성
+  repeat (기본값, 가득 찰 때까지 반복)
+  repeat-x (가로로 반복),
+  repeat-y (세로로 반복)
+  no-repeat (한 번만 출력)
+
+- background-size : 배경 이미지 크기를 조절하는 속성
+  contain (요소 안에 이미지가 들어가도록 확대/축소)
+  cover (요소 안에 이미지가 모두 덮을 때까지 확대)
+
+- background-position : 배경 이미지가 표시되는 위치를 조정하는 속성
+  수평위치(lefrm center, right)
+  수직위치(top, center, bottom)
+
+- background-attachment : 웹 페이지가 위아래로 움직여도 배경이미지를 고정시키는 속성
+
 # Flex(flexible Box, Flexbox)
 
 -CSS 레이아웃 모델로 화면 크기에 따라 레이아웃의 배치나 크기를 조절할 때 편리하게 사용
