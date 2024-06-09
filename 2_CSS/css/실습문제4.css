@@ -16,15 +16,15 @@
 }
 .square:nth-child(1),
 .square:nth-child(7) {
-  animation-delay: 100ms;
+  animation-delay: 75ms;
 }
 .square:nth-child(2),
 .square:nth-child(6) {
-  animation-delay: 66ms;
+  animation-delay: 50ms;
 }
 .square:nth-child(3),
 .square:nth-child(5) {
-  animation-delay: 33ms;
+  animation-delay: 25ms;
 }
 .square:nth-child(4) {
   animation-delay: 0ms;
