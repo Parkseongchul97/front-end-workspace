@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수와연산자</title>
+    <!--
+    <script>
+      console.log(222);
+      alert(333);
+    </script> 
+    <script src="/3_JavaScript/script.js"></script>
+    -->
+  </head>
+  <body>
+    <h1>변수</h1>
+    <p>어떠한 값을 저장하는 공간</p>
+    <!-- var, const, let -->
+    <script>
+      // 구식 - 거의 사용 X
+      var varA = 100; // var 변수명 = 값;
+      console.log(varA); // 100
+      varA = "zzz"; //varA의 값을 변경 zzz로
+      console.log(varA); // zzz
+
+      // 상수 - 값을 수정할 수 없다. (자주)
+      const constB = 200; // const 변수명 = 값;
+      console.log(constB); // 200
+      // constB = 300; // Uncaught TypeError
+
+      // 변수 - 값을 수정할 수 있다. (가끔)
+      let letC = 300; // let 변수명 = 값;
+      console.log(letC); // 300
+      letC = "xxx";
+      console.log(letC); // xxx
+
+      // typeof : 데이터 타입 확인
+      console.log(typeof constB); // number
+      console.log(typeof letC); // string
+    </script>
+
+    <!-- 기본 데이터 타입 -->
+    <!-- 문자열(string) -->
+    <script>
+      let message = '"안녕"이라고 말해보세요~';
+      // message = "\"안녕\"이라고 말해보세요~" ;
+      console.log(message);
+      console.log(message[0]); // "
+      console.log(message[8]); // 말
+      console.log(message.length); // 14 - 글자수
+
+      console.log("누군가에게", message); // 누군가에게 "안녕"이라고 말해보세요~ (,는 변수와 문자열 사이에 띄어쓰기가 들어가서 잘안씀)
+      console.log("누군가에게" + message); // 누군가에게"안녕"이라고 말해보세요~ (+ 는 띄어쓰기 x)
+      console.log("누군가에게 " + message); // 누군가에게 "안녕"이라고 말해보세요~
+      console.log(`누군가에게 ${message}`); // `로 감싸고 ${변수}`
+
+      const name = "서동문";
+      const age = 3;
+
+      console.log("안녕? 내 이름은", name, "이고, 나이는", age, "살!"); // 변수와 문자열 사이에 띄어쓰기가 들어감
+      console.log("안녕? 내 이름은 " + name + "이고, 나이는 " + age + "살!");
+      console.log(`안녕? 내 이름은 ${name}이고, 나이는 ${age}살!`);
+    </script>
+
+    <!-- 숫자 -->
+    <script>
+      const num1 = 10;
+      const num2 = 3;
+      console.log(num1 + num2); // 13
+      console.log(num1 - num2); // 7
+      console.log(num1 * num2); // 30
+      console.log(num1 / num2); // 3.333333...
+      console.log(num1 % num2); // 나머지 : 1
+      console.log(num1 ** num2); // 제곱 : 10^3 = 1000
+
+      // 문자열 -> 숫자 : Number()
+      console.log(typeof "100"); // string
+      console.log(typeof Number("100")); // number
+      console.log(Number("Hello")); // NaN (Not a Number)
+
+      // 숫자 -> 문자열 : String()
+      console.log(typeof String(100)); // string
+
+      // 실수 -> 정수 (소수점 제외) : parseInt()
+      console.log(parseInt(1.8));
+    </script>
+
+    <!-- undefined, null -->
+    <script>
+      let test;
+      console.log(test); // undefined - 정의되지 않음
+      test = null;
+      console.log(test); // null - 아무것도 없음
+    </script>
+
+    <!-- Boolean과 비교 연산자 -->
+    <script>
+      console.log(true); // 참
+      console.log(false); // 거짓
+      let num3 = 100;
+      let num4 = 200;
+      console.log(num3 < num4); // true
+      console.log(num3 >= num4); // false
+
+      num4 = 100;
+      num4 = "100";
+      console.log(num3 == num4); // true
+      console.log(num3 != num4); // false
+
+      // 데이터 타입까지 체크
+      console.log(num3 === num4); // true -> fales
+      console.log(num3 !== num4); // false -> true
+
+      // 다른 데이터 타입 -> Boolean
+      // false : 0, NaN, "", null, undefined
+      // 나머지는 true
+      console.log(Boolean("")); // false
+      console.log(Boolean(" ")); // true
+    </script>
+
+    <!-- 논리 연산자 -->
+    <script>
+      const a = 100;
+      const b = 200;
+
+      //  && : and(그리고) 연산자
+      console.log(a < 200 && a == 100); // true && true = true
+      //  모두 true면 true
+      console.log(a > 200 && a == 100); // false && true = false
+      //  하나라도 false면 false
+
+      // || : or(또는) 연산자
+      console.log(a > 200 || a == 100); // false || true = true
+      // 하나라도 true면 true
+      console.log(a > 200 || a != 100); // false || false = false
+      // 모두 false면 false
+
+      // ! : not(아니다)
+      console.log(!true); // false
+      console.log(!false); // true
+      console.log(!!(a > b)); // false를 2번 부정해서 다시 false
+    </script>
+  </body>
+</html>

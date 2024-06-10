@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+      변수 명명 규칙
+      1) 변수명에는 문자, 숫자, 기호는 $, _만 사용 
+      2) 첫글자에는 숫자 금지
+      3) 예약어(const, if, switch, ...) 금지
+      4) 표기법대로 사용 - camelCase(낙타표기법)
+      5) 상수(const로 표시한 것 X)는 대문자 + snake_case(언더바 표기법)
+    -->
+
+    <!-- 
+        Q1. 킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오.
+           - 파운드 = 킬로그램 * 2.2
+           예) 킬로그램 : 60  
+     -->
+    <script>
+      let kg = 0;
+      kg = 60;
+      let lb = kg * 2.2;
+      console.log(`${kg}킬로그램을 파운드로 환산하면 ${lb}파운드 입니다.`);
+    </script>
+
+    <!--
+        Q2. 제곱미터를 평으로 환산하여 console에 출력하시오.
+           - 평 = 제곱미터 * 0.3
+           예) 제곱미터 : 99
+    -->
+    <script>
+      let m = 0;
+      m = 99;
+      let p = m * 0.3;
+      console.log(`${m}제곱미터를 평으로 환산하면 ${p}평 입니다.`);
+    </script>
+
+    <!-- 
+        Q3. 사다리꼴의 넓이를 구하여 console에 출력하시오.
+           - 사다리꼴의 넓이 = (윗변 길이 + 밑변 길이) / 2 * 높이
+           예) 윗변 : 10, 밑변 : 14, 높이 : 4
+     -->
+    <script>
+      let top1 = 0;
+      let bottom = 0;
+      let height = 0;
+      top1 = 10;
+      bottom = 14;
+      height = 4;
+      let sadari = ((top1 + bottom) / 2) * height;
+      console.log(
+        `사다리꼴의 넓이를 구할때 윗변의 길이가 ${top1}이고, 밑변의 길이가 ${bottom}이고, 높이가 ${height}일 때 사다리 꼴의 넓이는 ${sadari}이다.`
+      );
+    </script>
+
+    <!-- 
+        Q4. 정기예금을 은행에 예치했을 때 수령하는 월 이자를 계산하여 console에 출력하시오. 단, 년 이율은 4%로 가정한다. 
+           - 월 이자 = 정기 예금액 * 0.04 / 12
+           - 예) 정기 예금액 : 12,000,000
+    -->
+    <script>
+      let yeeGold = 0;
+      yeeGold = 12000000;
+      let eJa = (yeeGold * 0.14) / 12;
+      console.log(
+        `년 이율 4% 은행에 ${yeeGold}만큼 돈을 예치 했을때 얻을 수 있는 월 이자는 ${eJa}원 이다.`
+      );
+    </script>
+
+    <!-- 
+        Q5. 머쓱이는 55살인 선생님이 몇 년도에 태어났는지 궁금해졌다. 나이 age가 주어질 때, 2024년을 기준 출생 연도를 console에 출력하시오.
+     -->
+    <script>
+      let teacharAge = 0;
+      teacharAge = 55;
+      let age = 2024 - teacharAge;
+      console.log(
+        `머쓱이의 선생님 나이가 ${teacharAge}일때 선생님의 출생 년도는 ${age}년도 이다.`
+      );
+    </script>
+
+    <!-- 
+        Q6. 머쓱이는 추운 날에도 아이스 아메리카노만 마신다. 아이스 아메리카노는 한잔에 5,500원이다. 
+            머쓱이가 가지고 있는 돈이 15,000원 일 때, 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 console에 출력하시오.
+     -->
+    <script>
+      let iceAmericano = 0;
+      iceAmericano = 5500;
+      let muSsgMoney = 0;
+      muSsgMoney = 15000;
+      let jan = muSsgMoney / iceAmericano;
+      let nng = muSsgMoney % iceAmericano;
+      console.log(
+        "머쓱이가 돈을 " +
+          muSsgMoney +
+          "원을 가지고 있을 때 " +
+          iceAmericano +
+          "원 짜리 아이스 아메리카노를 " +
+          parseInt(jan) +
+          "잔 마실수 있고 " +
+          nng +
+          "원의 돈이 남는다"
+      );
+    </script>
+
+    <!-- 
+      Q7. 머쓱이네 양꼬치 가게는 10인분을 먹으면 음료수 하나를 서비스로 준다. 양꼬치는 1인분에 12,000원, 음료수는 2,000원이다. 
+          양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
+     -->
+    <script>
+      let muSsgChingDdio = 0;
+      let coke = 0;
+      let muSsgChingDdioMoney = 0;
+      let cokeMoney = 0;
+      let freeCoke = 0;
+      muSsgChingDdioMoney = 12000;
+      cokeMoney = 2000;
+      coke = 6;
+      muSsgChingDdio = 64;
+      freeCoke = parseInt(muSsgChingDdio / 10);
+      let totle =
+        cokeMoney * (coke - freeCoke) + muSsgChingDdioMoney * muSsgChingDdio;
+      console.log(
+        "양꼬치 10인분당 음료수 1개가 서비스인 머쓱이네 양꼬치 가게에서" +
+          muSsgChingDdioMoney +
+          "원 짜리 양꼬치를" +
+          muSsgChingDdio +
+          "인분" +
+          cokeMoney +
+          "짜리 음료수를 " +
+          coke +
+          "개를 시켜먹었다면 " +
+          freeCoke +
+          "개의 서비스 음료수를 서비스로 받아 총 금액은" +
+          totle +
+          "원이 나온다."
+      );
+    </script>
+  </body>
+</html>

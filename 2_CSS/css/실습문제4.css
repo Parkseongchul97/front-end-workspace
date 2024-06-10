@@ -11,23 +11,23 @@
   width: 2px;
   height: 10px;
   margin: 1px;
-  border-radius: 30%;
+  border-radius: 8px;
   animation: boxAni 1s infinite;
 }
 .square:nth-child(1),
 .square:nth-child(7) {
-  animation-delay: 75ms;
+  animation-delay: 500ms;
 }
 .square:nth-child(2),
 .square:nth-child(6) {
-  animation-delay: 50ms;
+  animation-delay: 375ms;
 }
 .square:nth-child(3),
 .square:nth-child(5) {
-  animation-delay: 25ms;
+  animation-delay: 250ms;
 }
 .square:nth-child(4) {
-  animation-delay: 0ms;
+  animation-delay: 125ms;
 }
 
 @keyframes boxAni {
