@@ -11,36 +11,95 @@ body {
   color: white;
   padding-left: 100px;
   font-size: 14px;
+  text-wrap: nowrap;
+  z-index: 1;
 }
 .head img {
   padding-right: 10px;
 }
 header {
+  position: fixed;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  padding-top: 30px;
+  padding: 30px 400px 0px 400px;
+  border-bottom: 1px solid #ddd;
+  text-wrap: nowrap;
+  background-color: white;
 }
 .header1 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ddd;
-
   width: 100%;
-  height: 150px;
-  background-color: skyblue;
+  height: 88px;
 }
 .header-left {
+  justify-content: center;
   display: flex;
+  color: #333;
+}
+.header-left ul :nth-child(1) {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.header-left ul :nth-child(2) {
+  font-size: 13px;
+  padding-left: 2px;
 }
 .header-center {
-  width: 700px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
 }
 .header-center #logo {
   background-image: url(/jjappage/img/logo.png);
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  width: 170px;
+  height: 40px;
   padding: 20px;
+}
+#hrh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hri {
+  border: 1px solid #eee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 5px 5px;
+  margin: 8px 8px;
+  background-color: #eee;
+}
+#hrt1 {
+  color: #2f55d2;
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+#hrt2 {
+  color: #444;
+  font-weight: 600;
+  font-size: 13px;
+}
+.header2 {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  justify-content: space-around;
+  line-height: 1.3rem;
+}
+.header2 ul {
+  display: inline-block;
+  text-wrap: nowrap;
+  text-align: center;
+  line-height: 1.6rem;
+  padding: 3px;
+}
+main {
+  padding-top: 120px;
 }
