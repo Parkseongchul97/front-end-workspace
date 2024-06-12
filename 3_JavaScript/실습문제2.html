@@ -12,12 +12,19 @@
         Q1. 웹 사이트 관리자는 아이디(id)가 'admin'인 경우라고 가정한다. 다음은 관리자일 경우 '관리자입니다.'를 console에 출력하시오.
      -->
     <script>
-      let id = prompt("id를 입력하시오");
+      console.log(" --- Q1 --- ");
+      //const id = prompt("id를 입력하시오");
+      const id = "admin";
       if (id === "admin") {
         console.log("관리자입니다.");
       } else {
         console.log("잘못된 값입니다");
       }
+      // switch 문으로도 가능
+      // switch (id) {
+      //  case "admin":
+      //    console.log("관리자입니다.");
+      //}
     </script>
 
     <!-- 
@@ -25,8 +32,11 @@
             합격 조건을 만족하였을 때 '합격', 만족하지 않으면 '불합격'을 console에 출력하시오.
       -->
     <script>
-      let drive1 = prompt("운전면허 필기 점수를 입력하시오."),
-        drive2 = prompt("운전면허 실기 점수를 입력하시오.");
+      console.log(" --- Q2 --- ");
+      // const drive1 = prompt("운전면허 필기 점수를 입력하시오."),
+      //  drive2 = prompt("운전면허 실기 점수를 입력하시오.");
+      const drive1 = 95,
+        drive2 = 87;
       if (drive1 >= 80 && drive2 >= 80) {
         console.log("합격");
       } else if (drive1 < 80 || drive2 < 80) {
@@ -40,8 +50,10 @@
         Q3. 어떤 정수가 10과 20의 사이에 있는 수인지를 판별하여 사이에 있다면 '10과 20의 사이에 있습니다'를 출력, 그렇지 않다면 '10과 20의 사이에 있지 않습니다'를 console에 출력하시오.
      -->
     <script>
-      let num1 = prompt("어떤 정수를 입력하시오");
-      if (num1 >= 10 && num1 <= 20) {
+      console.log(" --- Q3 --- ");
+      // const num1 = prompt("어떤 정수를 입력하시오");
+      const num1 = 18;
+      if (num1 > 10 && num1 < 20) {
         console.log("10과 20의 사이에 있습니다");
       } else {
         console.log("10과 20의 사이에 있지 않습니다");
@@ -52,7 +64,9 @@
         Q4. 나이(age)가 65세 이상이거나 8세 미만이면 '입장료는 무료입니다'를 출력, 그렇지 않다면 '입장료는 10,000원입니다'를 console에 출력하시오.
       -->
     <script>
-      let age = prompt("나이를 입력하시오");
+      console.log(" --- Q4 --- ");
+      //const age = prompt("나이를 입력하시오");
+      const age = 50;
       if (8 > age || 65 <= age) {
         console.log("입장료는 무료입니다.");
       } else {
@@ -66,17 +80,61 @@
             예) 12월은 겨울입니다.
      -->
     <script>
-      let month = prompt("월을 입력하십시오");
-      if (3 <= month && 5 >= month) {
+      console.log(" --- Q5 --- ");
+      const month = Number(prompt("월을 입력하십시오"));
+      // prompt는 string 타입이라 Number 함수를 통해서 숫자로 변환해야지 === 통과
+      // if -> 중첩 가능하나 가급적으로 사용 X
+      /*if (3 <= month && 5 >= month) {
         console.log("봄");
       } else if (6 <= month && 8 >= month) {
         console.log("여름");
       } else if (9 <= month && 11 >= month) {
         console.log("가을");
-      } else if (2 >= month || 12 == month) {
+      } // else if (2 >= month || 12 == month) {
+      else if (month === 12 || (1 <= month && month <= 2)) {
         console.log("겨울");
       } else {
         console.log("잘못된 값입니다");
+      }
+      */
+      let season = "";
+      if (1 <= month && month <= 12) {
+        if (3 <= month && 5 >= month) {
+          season = "봄";
+        } else if (6 <= month && 8 >= month) {
+          season = "여름";
+        } else if (9 <= month && 11 >= month) {
+          season = "가을";
+        } else {
+          season = "겨울";
+        }
+        console.log(`${month}월은 ${season}입니다.`);
+      }
+      switch (month) {
+        case 3:
+        case 4:
+        case 5:
+          season = "봄";
+          break;
+        case 6:
+        case 7:
+        case 8:
+          season = "여름";
+          break;
+        case 9:
+        case 10:
+        case 11:
+          season = "가을";
+          break;
+        case 12:
+        case 1:
+        case 2:
+          season = "겨울";
+          break; // 마지막은 생략해도 상관 x
+      }
+      if (season !== "") {
+        // season 기본값이 "" 이니까 비어있지 않을때만 출력하게 해서 17월을 입니다 이런걸 막음
+        console.log(`${month}월은 ${season}입니다.`);
       }
     </script>
   </body>
