@@ -10,7 +10,7 @@
     <script>
       const tel = ["010", "1234", "5678"];
       // 출력 예시 : 010-1234-5678
-      console.log(tel.join(""));
+      console.log(tel.join("-"));
     </script>
 
     <!-- Q2. 배열 함수들 활용!-->
@@ -43,12 +43,20 @@
       const music = ["가요", "팝송", "클래식", "재즈", "OST"];
 
       // ['팝송', '클래식', '재즈']
-      music.pop();
+      const music2 = music.slice(1, 4);
+      console.log(music2);
+
+      /*music.pop();
       music.shift();
-      console.log(music);
+      console.log(music);*/
+
       // ['OST']
-      music.splice(0, 3, "OST");
-      console.log(music);
+      const music3 = music.slice(4);
+      // slice에서 끝나는 index를 생략하면 시작한부분 -> 끝까지 자른다
+      console.log(music3);
+
+      /*music.splice(0, 3, "OST");
+      console.log(music);*/
     </script>
 
     <!-- Q4. 해당 배열을 오름차순(작은 숫자 ~ 큰 숫자)으로 정렬해주세요  -->

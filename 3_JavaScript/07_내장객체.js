@@ -12,7 +12,7 @@ function btn2() {
 function btn3() {
   //console.log("랜덤 :", Math.random()); // 0 ~ 1의 숫자중 무작위
 
-  // 1~ 10 까지의 랜덤값
+  // 0~2 까지의 랜덤값
   const result = Math.floor(Math.random() * 10 + 1);
   console.log(result);
 }
