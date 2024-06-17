@@ -1,0 +1,92 @@
+* {
+  text-align: center;
+  border: 1px solid;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  border: none;
+}
+#head1,
+#head2,
+#head3 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+#head1 div {
+  border: 1px solid;
+  width: 100%;
+  padding: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-right: none;
+}
+#head2 {
+  width: 900px;
+  height: 100%;
+  border: 1px solid;
+}
+
+#head2 div {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border: 1px solid;
+  text-wrap: nowrap;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+#head3 div {
+  border: 1px solid;
+  width: 100%;
+  padding: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-left: none;
+}
+#bar {
+  text-align: left;
+  padding-left: 20px;
+  width: 100%;
+  border: 1px solid;
+  border-bottom: none;
+  border-top: none;
+  line-height: 150%;
+  padding: 5px 0px 0px 20px;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 91vh;
+}
+main #img {
+  height: 100%;
+  width: 50%;
+  background-image: url(/product.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #text {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid;
+}
+#text h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+#text p {
+  padding: 20px 50px 15px 50px;
+}
