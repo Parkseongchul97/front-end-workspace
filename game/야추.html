@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>야추DICE</title>
+    <link rel="stylesheet" href="/game/야추.css" />
+  </head>
+  <body>
+    <!-- 
+    주사위 6개
+    주사위 선택 리롤 기능
+    최대 2회씩 한번에 돌려야하고
+
+    점수판
+    포카 야추 그런거 각점수 + 보너스 점수 계산
+
+
+     -->
+    <div id="dicePlece">
+      <div class="di">
+        <img src="/game/img/dice.png" />
+        <button class="hold" id="hold1">홀드</button>
+      </div>
+      <div class="di">
+        <img src="/game/img/dice.png" />
+        <button class="hold" id="hold2">홀드</button>
+      </div>
+      <div class="di">
+        <img src="/game/img/dice.png" />
+        <button class="hold" id="hold3">홀드</button>
+      </div>
+      <div class="di">
+        <img src="/game/img/dice.png" />
+        <button class="hold" id="hold4">홀드</button>
+      </div>
+      <div class="di">
+        <img src="/game/img/dice.png" />
+        <button class="hold" id="hold5">홀드</button>
+      </div>
+      <div class="di">
+        <img src="/game/img/dice.png" />
+        <button class="hold" id="hold6">홀드</button>
+      </div>
+    </div>
+    <main>
+      <button id="reroll">리롤</button>
+      <button id="cak">확인</button>
+    </main>
+    <div id="scoreBorad">
+      <div>
+        <div id="aces">Aces</div>
+        <input></input>
+        
+      </div>
+      <button>완료</button>
+      <div>
+        <div id="deuces">Deuces</div>
+        <input></input>
+      </div>
+      <button>완료</button>
+      <div>
+        <div id="threes">Threes</div>
+        <input></input>
+      </div>
+      <button>완료</button>
+      <div>
+        <div id="fours">Fours</div>
+        <input></input>
+      </div>
+      <button>완료</button>
+      <div>
+        <div id="fives">Fives</div>
+        <input></input>
+      </div>
+      <button>완료</button>
+      <div>
+        <div id="sixes">Sixes</div>
+        <input></input>
+      </div>
+      <button>완료</button>
+      <div>
+        <div id="SubTotal">SubTotal</div>
+        <input></input>
+      </div>
+      <button>완료</button>
+    </div>
+
+    <script src="/game/야추.js"></script>
+  </body>
+</html>

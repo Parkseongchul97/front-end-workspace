@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  padding: 20px;
+}
+header {
+  text-align: center;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid;
+}
+#blueTeam {
+  display: flex;
+  flex-direction: column;
+}
+img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+}
+#blueTeamDiceButton {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 255, 0.7);
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#redTeam {
+  display: flex;
+  flex-direction: column;
+}
+#redTeamDiceButton {
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#endline {
+  padding-top: 20px;
+}
+#endline div {
+  padding-bottom: 10px;
+}
+#end {
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 20px;
+}
+#team {
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
+}
+#text {
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
+}
+#reset {
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border: none;
+  padding: 5px 10px 5px 10px;
+}

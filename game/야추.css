@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#dicePlece {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.di {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  padding-bottom: 10px;
+}
+#dicePlece img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+#dicePlece button {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+#dicePlece button:hover {
+  background-color: #eee;
+  color: black;
+  border: 1px solid black;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+main button {
+  margin-top: 20px;
+  background-color: black;
+  width: 200px;
+  height: 50px;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px;
+}
+main button:hover {
+  background-color: #eee;
+  color: black;
+  border: 1px solid black;
+}
+
+#scoreBorad {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid;
+}
+#scoreBorad div {
+  display: flex;
+  border-right: none;
+  border-bottom: 1px solid;
+  justify-content: space-between;
+}
+#scoreBorad div:nth-last-child(1) {
+  border-bottom: none;
+}
+#scoreBorad div div {
+  display: flex;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+}
+#scoreBorad div input {
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+button {
+  border: none;
+  border-bottom: 1px solid;
+}

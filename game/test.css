@@ -55,9 +55,18 @@ header div h1 {
   background-color: rgba(148, 148, 14, 0.226);
 }
 #head2 {
-  background-color: rgba(11, 228, 11, 0.178);
+  background-image: url(/resources/cake.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 #head3 {
+  background: linear-gradient(
+    32deg,
+    rgba(11, 028, 171, 0.178) 30%,
+    rgba(11, 228, 11, 0.178) 50%
+  );
   background-color: rgba(11, 028, 171, 0.178);
 }
 #top {
@@ -78,6 +87,7 @@ header div h1 {
   background-color: white;
   color: black;
 }
+
 .input {
   border: none;
   width: 200px;

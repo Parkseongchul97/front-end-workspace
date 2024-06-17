@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/game/주사위.css" />
+  </head>
+  <body>
+    <header>
+      <h1>주사위 굴리기 게임</h1>
+      <p>홍팀과 청팀 각각 주사위를 굴려 눈이 높은 팀이 승리합니다!</p>
+    </header>
+    <main>
+      <div id="blueTeam">
+        청팀
+        <img id="blueTeamDice" src="/game/img/dice.png" alt="" />
+        <button id="blueTeamDiceButton">굴리기</button>
+      </div>
+      <div id="redTeam">
+        홍팀
+        <img id="redTeamDice" src="/game/img/dice.png" alt="" />
+        <button id="redTeamDiceButton">굴리기</button>
+      </div>
+    </main>
+    <div id="endline">
+      <button id="end">결과 확인!</button>
+      <div>청팀의 주사위의 눈 : <span id="blue"></span></div>
+      <div>홍팀의 주사위의 눈 : <span id="red"></span></div>
+      <div id="team"></div>
+      <div id="text"></div>
+      <button id="reset">초기화</button>
+    </div>
+    <script src="/game/주사위.js"></script>
+  </body>
+</html>
