@@ -85,7 +85,14 @@ main button:hover {
   border-bottom: none;
   border-right: none;
 }
-button {
+#scoreBorad button {
+  background-color: black;
+  color: white;
   border: none;
   border-bottom: 1px solid;
+  font-weight: bold;
+}
+#scoreBorad button:hover {
+  background-color: #ddd;
+  color: black;
 }

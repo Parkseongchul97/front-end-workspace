@@ -25,7 +25,7 @@ pw.addEventListener("input", function () {
   }
 });
 pwc.addEventListener("input", function () {
-  if ((pw.value === pwc.value) == false) {
+  if (pw.value !== pwc.value) {
     text3.innerHTML = `비밀번호와 일치하지 않습니다.`;
     text3.style.color = "red";
   } else {
