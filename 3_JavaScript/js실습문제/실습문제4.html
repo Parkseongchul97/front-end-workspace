@@ -10,10 +10,9 @@
     <script>
       console.log("--- Q1 ---");
       for (let i = 100; i <= 200; i++) {
-        if (i % 5 === 0) {
-          continue;
+        if (i % 5 !== 0) {
+          console.log(i);
         }
-        console.log(i);
       }
     </script>
 
@@ -22,11 +21,11 @@
       console.log("--- Q2 ---");
       let num = 0;
       for (let i = 1; i <= 1000; i++) {
-        if (i % 3 != 0) {
-        } else {
+        if (i % 3 === 0) {
           num += i;
         }
       }
+
       console.log(num);
     </script>
 
@@ -34,9 +33,15 @@
     <script>
       console.log("--- Q3 ---");
       const str = "안녕하세요. 반갑습니다!".split("");
+      // .split으로 배열로 변환하지 않아도 문자열은 배열처럼 사용가능
       for (let i = 0; i < str.length; i++) {
         console.log(str[i]);
       }
+      /*
+      for (const value of str) {
+        console.log(value);
+      }
+      */
     </script>
 
     <!-- Q4. 배열 값 중 최대값을 출력하세요 -->
@@ -45,13 +50,38 @@
       const nums = [3, 7, 12, 5, 3];
       nums.sort((a, b) => a - b);
       console.log(nums[nums.length - 1]);
+
+      let max = nums[0];
+      for (let num of nums) {
+        // max : 3 num : 3
+        // max : 3 num : 7 -> max < num 이라 7이됨
+        // max : 7 num : 12
+        // max : 12 num : 5
+        // max : 12 num : 3 -> 모두 비교해도 max보다 num이 큰 경우가 없으니 결국 max는 12
+        if (max < num) {
+          max = num;
+        }
+      }
+      console.log(max);
+      console.log(Math.max(...nums)); // ... 연산자가 배열 앞에 붙어있으면 배열값을 나열해줌
+      console.log(...nums);
     </script>
 
     <!-- Q5. 1 ~ 10 정수 중 소수(1과 자기자신)를 출력하세요
               2, 3, 5, 7
     -->
     <script>
-      console.log("--- Q5????????? ---");
+      console.log("--- Q5 ---");
+      for (let i = 2; i <= 10; i++) {
+        for (let j = 2; j <= i; j++) {
+          if (i % j === 0) {
+            // 나눠서 0으로 떨어지는걸 고르고
+            if (i !== j) break;
+            // 그중 본인이 아닌것으로도 나눠지는 수(4는 2로 나눠짐)일 때 break
+            console.log(i);
+          }
+        }
+      }
 
       /*for (let i = 2; i <= 10; i++) {
         for (let j = 2; j < i; j++) {
@@ -66,10 +96,13 @@
     <script>
       console.log("--- Q6 ---");
       const nums2 = [1, 3, 5];
-      const arr2 = nums2.map((value) => {
-        return value * 2;
+      const num4 = nums2.map((num) => {
+        return num * 2;
       });
-      console.log(arr2);
+      console.log(num4);
+      for (const num of nums2) {
+        console.log(num * 2);
+      }
     </script>
 
     <!-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 -->
@@ -81,7 +114,14 @@
         sum3 += nums3[i];
       }
       console.log(sum3);
-      console.log(sum3 / nums3.length + 1);
+      console.log(sum3 / nums3.length);
+
+      sum4 = nums3.reduce((ac, num) => {
+        return ac + num;
+        // 한줄로 사용시 return과 {} 생략 가능
+      });
+      console.log(sum4);
+      console.log(sum4 / nums3.length);
     </script>
 
     <!-- Q8. 두 배열의 각 데이터의 곱셈을 한 데이터들로 이루어진 새로운 배열을 생성하여 출력하세요 -->
@@ -90,14 +130,19 @@
       const a1 = [12, 0, 2, 5, 4];
       const b1 = [5, 15, 6, 7, 8];
       const c1 = [];
+      const c3 = [];
       /*for(let i = 0; i < a1.length; i++){
         for(let j = 0; j < b1.length; j++){
           total = 0;
           total =a1[i]*b1[j]
           c1.push(total)
-
         }
       }*/
+      for (const index in a1) {
+        c3.push(a1[index] * b1[index]);
+      }
+      console.log(c3);
+
       for (let i = 0; i < a1.length; ) {
         for (let j = 0; j < b1.length; ) {
           total = 0;
@@ -116,6 +161,7 @@
       const a2 = [12, 0, 2, 5, 4];
       const b2 = [0, 2, 3, 12, 8];
       const c2 = [];
+      const c5 = [];
       let cc = 0;
       for (let i = 0; i < a2.length; i++) {
         for (let j = 0; j < b2.length; j++) {
@@ -126,6 +172,14 @@
         }
       }
       console.log(c2);
+
+      a2.forEach((a) => {
+        // a값은 데이터, b2는 배열 - > a값이 b2에 있는지 확인
+        if (b2.includes(a)) {
+          c5.push(a);
+        }
+      });
+      console.log(c5);
     </script>
 
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
@@ -133,7 +187,7 @@
       console.log("--- Q10 ---");
 
       const scores = [
-        [83, 90, 70, 87],
+        [83, 90, 70, 87], // scores[0][0~3]
         [87, 93, 62, 83],
         [98, 90, 77, 97],
       ];
@@ -142,11 +196,18 @@
         for (let j = 0; j < scores[i].length; j++) {
           scoresPlus += scores[i][j];
         }
-
         console.log(scoresPlus);
         console.log(scoresPlus / scores[i].length);
         //1열씩의 합과 평균만 구하면됨
         scoresPlus = 0;
+      }
+      let total = 0;
+      for (let i = 0; i < scores.length; i++) {
+        for (let j = 0; j < scores[i].length; j++) {
+          total += scores[i][j];
+        }
+        console.log(total, total / scores[i].length);
+        total = 0;
       }
     </script>
   </body>
