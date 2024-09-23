@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/2_CSS/css/reset.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #img-box {
+        background-image: url(/resources/400px-Blank_Go_board.png);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        background-color: rgba(255, 255, 255, alpha);
+        width: 20px;
+        height: 20px;
+        border: none;
+      }
+      #box-1 {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="img-box">
+      <main>
+        <div id="box-1"></div>
+      </main>
+    </div>
+
+    <div id="box-2">
+      다음 둘사람 : <span id="text">흑</span> <button>리셋</button>
+    </div>
+    <script src="오목.js"></script>
+  </body>
+</html>

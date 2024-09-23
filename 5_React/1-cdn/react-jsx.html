@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- JSX(Javascript Syntax Extension) JS 확장 문법-->
+    <div id="root"></div>
+    <script id="test" type="text/babel">
+      // babel 추가  type에 넣으면 적용
+      let count = 0;
+      const setCount = () => {
+        count++;
+        // 클릭때마다 랜더링
+        ReactDOM.render(<Container />, root);
+      };
+      const Container = () => {
+        return (
+          <div>
+            <h1>Total Clicks : {count} </h1>
+            <button onClick={setCount}>Click!</button>
+          </div>
+        );
+      };
+      // 처음 랜더링
+      ReactDOM.render(<Container />, root);
+      export default reactTest;
+    </script>
+  </body>
+</html>

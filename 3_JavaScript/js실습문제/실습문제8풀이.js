@@ -15,7 +15,7 @@ const emailText = document.querySelector("#emailText");
 
     맞으면 초록색 + OK 출력
 */
-id.addEventListener("input", function () {
+id.addEventListener("submit", function () {
   // 첫글자는 반드시 영문자로, 그리고 영문자, 숫자 포함하여 총 4~12자로입력하시오.
   const regExp = /^[a-zA-z][0-9a-zA-Z]{3,11}$/;
   const check = regExp.test(id.value);

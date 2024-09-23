@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테마별 매칭 사이트</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0e5d8; /* 부드러운 베이지 배경색 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      .banner {
+        background-color: #d0b89b; /* 배너 배경색 */
+        color: #fff; /* 배너 텍스트 색상 */
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 40px;
+      }
+      .banner h1 {
+        margin: 0;
+        font-size: 2.5em;
+        font-weight: bold;
+      }
+      .banner p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+      }
+      .container {
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .card {
+        background: #fff8f2; /* 밝은 베이지색 카드 배경 */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #e0c7b0; /* 카드 이미지와 카드 본문 사이의 경계선 색상 */
+      }
+      .card h2 {
+        margin: 20px 0;
+        color: #8e735b; /* 카드 제목 색상 */
+      }
+      .card p {
+        padding: 0 20px 20px;
+        color: #6d4c41; /* 카드 설명 색상 */
+      }
+      .card a {
+        display: block;
+        margin: 20px;
+        padding: 10px;
+        background-color: #d0b89b; /* 버튼 배경색 */
+        color: #fff; /* 버튼 텍스트 색상 */
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .card a:hover {
+        background-color: #b89a77; /* 버튼 호버 시 색상 */
+        text-decoration: underline;
+      }
+      .promotion-posts {
+        margin-top: 40px;
+      }
+      .promotion-post {
+        background: #fff8f2;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .promotion-post h3 {
+        margin: 0 0 10px;
+        color: #8e735b;
+      }
+      .promotion-post p {
+        margin: 5px 0;
+        color: #6d4c41;
+      }
+      .promotion-post .apply-button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #d0b89b;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .promotion-post .apply-button:hover {
+        background-color: #b89a77;
+        text-decoration: underline;
+      }
+      .category-list {
+        list-style: none;
+        padding: 0;
+      }
+      .category-item {
+        background: #fff8f2;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+        padding: 20px;
+        cursor: pointer;
+      }
+      .subcategory-list {
+        list-style: none;
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <h1>테마별 매칭 사이트</h1>
+      <p>다양한 클럽을 찾아보고 나만의 모임을 만들어보세요!</p>
+    </div>
+
+    <div class="container">
+      <h2>클럽 테마</h2>
+      <ul class="category-list" id="categoryList"></ul>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="테마 1" />
+          <h2>스포츠</h2>
+          <p>야구, 축구, 농구 등 다양한 스포츠 클럽을 찾아보세요.</p>
+          <a href="#">자세히 보기</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="테마 2" />
+          <h2>식도락</h2>
+          <p>미식과 맛집 탐방을 즐길 수 있는 클럽을 만나보세요.</p>
+          <a href="#">자세히 보기</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="테마 3" />
+          <h2>캠핑</h2>
+          <p>자연 속에서 캠핑을 즐길 수 있는 클럽을 찾아보세요.</p>
+          <a href="#">자세히 보기</a>
+        </div>
+        <!-- 추가 카드들 -->
+      </div>
+
+      <div class="promotion-posts">
+        <div class="promotion-post">
+          <h3>클럽 홍보글 제목 1</h3>
+          <p><strong>작성자:</strong> 호스트닉네임</p>
+          <p><strong>조회수:</strong> 123</p>
+          <p><strong>클럽 내용:</strong> 스포츠 - 야구 - 클럽명</p>
+          <p><strong>주로 만나는 위치:</strong> 서울</p>
+          <p>
+            <strong>클럽 소개:</strong> 이 클럽은 야구를 사랑하는 사람들의
+            모임입니다.
+          </p>
+          <p><strong>클럽 등급:</strong> ★★★★☆ (4.0/5)</p>
+          <p><strong>작성시간:</strong> 2024-07-25</p>
+          <a href="#" class="apply-button">신청하기</a>
+        </div>
+        <div class="promotion-post">
+          <h3>클럽 홍보글 제목 2</h3>
+          <p><strong>작성자:</strong> 호스트닉네임</p>
+          <p><strong>조회수:</strong> 456</p>
+          <p><strong>클럽 내용:</strong> 식도락 - 맛집 탐방 - 클럽명</p>
+          <p><strong>주로 만나는 위치:</strong> 부산</p>
+          <p>
+            <strong>클럽 소개:</strong> 이 클럽은 맛있는 음식을 즐기는 사람들의
+            모임입니다.
+          </p>
+          <p><strong>클럽 등급:</strong> ★★★☆☆ (3.5/5)</p>
+          <p><strong>작성시간:</strong> 2024-07-24</p>
+          <a href="#" class="apply-button">신청하기</a>
+        </div>
+        <!-- 추가 홍보글들 -->
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/categories")
+          .then((response) => response.json())
+          .then((data) => {
+            const categoryList = document.getElementById("categoryList");
+            data.forEach((category) => {
+              const categoryItem = document.createElement("li");
+              categoryItem.classList.add("category-item");
+              categoryItem.innerHTML = `
+                            <strong>${category.category_name}</strong>
+                            <ul class="subcategory-list">
+                                ${
+                                  category.subcategories
+                                    ? category.subcategories
+                                        .split(",")
+                                        .map((sub) => `<li>${sub}</li>`)
+                                        .join("")
+                                    : "소분류 없음"
+                                }
+                            </ul>
+                        `;
+              categoryList.appendChild(categoryItem);
+            });
+          })
+          .catch((error) => console.error("Error fetching categories:", error));
+      });
+    </script>
+  </body>
+</html>
