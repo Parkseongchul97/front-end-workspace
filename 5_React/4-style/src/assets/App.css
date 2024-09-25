@@ -1,0 +1,9 @@
+.css-class-test {
+  background-color: purple;
+  color: white;
+  text-align: center;
+}
+#css-id-test {
+  text-shadow: 1px;
+  color: black;
+}
