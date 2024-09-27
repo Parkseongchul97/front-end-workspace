@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-left">즐겨찾기 채널, 채널모두보기</div>
+      <div id="header-center">Nest Library</div>
+      <div id="header-right">마이페이지(대충아이콘) (대충닉네임)</div>
+    </div>
+    <div id="box">
+      <div class="switching-channel" id="switching-channel-1">
+        <img src="bao.jpg" alt="" />
+        <p class="channel-name">
+          판다 채널<span class="channel-count">구독 회원수 18k</span>
+        </p>
+        <p class="channel-text">푸바오 루이바오 사랑해</p>
+      </div>
+      <div
+        class="switching-channel"
+        id="switching-channel-2"
+        style="display: none"
+      >
+        <img src="pizza.jpg" alt="" />
+        <p class="channel-name">
+          전피협 채널<span class="channel-count">구독 회원수 5k</span>
+        </p>
+        <p class="channel-text">전국 피자 협회입니다</p>
+      </div>
+    </div>
+  </body>
 </html>

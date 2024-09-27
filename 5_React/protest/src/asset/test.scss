@@ -1,0 +1,47 @@
+.header {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  div {
+    width: 100%;
+  }
+
+  .header-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+
+    margin: auto;
+    .channel-menu {
+      display: flex;
+      color: white;
+    }
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .user-Tap {
+    display: flex;
+    justify-content: center;
+    color: white;
+    div {
+      padding-left: 10px;
+    }
+  }
+  .search {
+    height: 15px;
+    border: none;
+    border-radius: 15px;
+    padding: 0.6rem 0.6rem 0.6rem 3rem;
+    background-color: white;
+    color: black;
+  }
+}
